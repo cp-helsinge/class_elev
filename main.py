@@ -6,10 +6,13 @@ class Menneske
     efternavn=""
     arme=2
     ben=2
+    def antalArme(self): arme
+    def antalBen(self): ben
 
 class DerivedClass(Menneske): Elev
     uartig="Nej"
+    def erUartig(self): uartig
 
 class DerivedClass(Menneske): Underviser
     streng="Ja"
- 
+    def erStreng(self): uartig
