@@ -1,13 +1,20 @@
 # Dette er hovedfilen som instuktørerne kan proppe indhold i
 # Elever skal holde sig uden for denne fil
 
+import datetime
+
 class Menneske:
     ''' Dette er vores Menneske klasse '''
-    def __init__ (self)
-        fornavn=""
-        efternavn=""
-        arme=2
-        ben=2
+    def __init__ (self, fn, en):
+        self.fornavn=fn
+        self.efternavn=en
+        self.arme=2
+        self.ben=2
+        self.fødselsdag=None
+        self.alder=None
+
+    def printname(self):
+        print(self.fornavn, self.efternavn)
 
     def antalArme(self):
         print("Jeg har",arme,"arme")
@@ -17,8 +24,12 @@ class Menneske:
         print("Jeg har",ben,"ben")
         return self.ben
 
+    def hvorGammel(self):
+        print("Jeg er",alder,"år gammel")
+        return self.alder
 
-class DerivedClass(Menneske): Elev
+
+class Elev(Menneske):
     ''' Dette er vores Elev klasse som nedarver fra Menneske klassen '''
     def __init__ (self):
         uartig="Nej"
@@ -27,7 +38,7 @@ class DerivedClass(Menneske): Elev
         return self.uartig
 
 
-class DerivedClass(Menneske): Underviser
+class Underviser(Menneske):
     ''' Dette er vores Underviser klasse som nedarver fra Menneske klassen '''
 
     def __init__ (self):
@@ -37,4 +48,6 @@ class DerivedClass(Menneske): Underviser
         return self.streng
 
 
+jesper=Underviser()
+jesper.arme
 
