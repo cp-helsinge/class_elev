@@ -33,7 +33,7 @@ class Menneske:
         nu = date.today()
         fdag = date(self.fødtÅr, self.fødtMåned, self.fødtDag)
         return nu.year - fdag.year - ((nu.month, day) < (fdag.month, fDag.day))
-
+        
 
 class Elev(Menneske):
     ''' Dette er vores Elev klasse som nedarver fra Menneske klassen '''
