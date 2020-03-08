@@ -10,7 +10,9 @@ class Menneske:
         self.efternavn=en
         self.arme=2
         self.ben=2
-        self.fødselsdag=None
+        self.fødtDato=0
+        self.fødtMåned=0
+        self.fødtÅr=0
         self.alder=None
 
     def printname(self):
@@ -32,6 +34,7 @@ class Menneske:
 class Elev(Menneske):
     ''' Dette er vores Elev klasse som nedarver fra Menneske klassen '''
     def __init__ (self):
+        super().__init__()
         self.uartig="Nej"
 
     def erUartig(self):
@@ -41,6 +44,7 @@ class Elev(Menneske):
 class Underviser(Menneske):
     ''' Dette er vores Underviser klasse som nedarver fra Menneske klassen '''
     def __init__ (self):
+        super().__init__()
         self.streng="Ja"
 
     def erStreng(self):
