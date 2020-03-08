@@ -10,7 +10,7 @@ class Menneske:
         ben=2
 
     def antalArme(self):
-        print("Jeg har ";arme;" arme")
+        print("Jeg har ",arme," arme")
         return self.arme
 
     def antalBen(self):
