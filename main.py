@@ -13,25 +13,26 @@ class Menneske:
         self.fødtDag=0
         self.fødtMåned=0
         self.fødtÅr=0
+        self.alder=datetime.datetime(1900,1,31)
 
     def fuldeNavn(self):
         print(self.fornavn, self.efternavn)
 
     def antalArme(self):
-        print("Jeg har",arme,"arme")
+        print("Jeg har",self.arme,"arme")
         return self.arme
 
     def antalBen(self):
-        print("Jeg har",ben,"ben")
+        print("Jeg har",self.ben,"ben")
         return self.ben
 
     def hvorGammel(self):
-        print("Jeg er",alder,"år gammel")
+        print("Jeg er",self.alder,"år gammel")
         return self.alder
 
     def alder(self):
-        nu = date.today()
-        fdag = date(self.fødtÅr, self.fødtMåned, self.fødtDag)
+        nu = datetime.datetime.today()
+        fdag = datetime.datetime(self.fødtÅr, self.fødtMåned, self.fødtDag)
         return nu.year - fdag.year - ((nu.month, day) < (fdag.month, fDag.day))
 
 
@@ -60,5 +61,7 @@ obj.efternavn="Sommer"
 obj.fødtDato=27
 obj.fødtMåned=3
 obj.fødtÅr=1973
-print(obj.antalArme)
-print(obj.fuldeNavn,"har",obj.arme,"arme,",obj.ben,"ben, og er",obj.alder,"år gammel")
+
+print(obj.antalArme())
+
+print(obj.fuldeNavn,"har",obj.arme,"arme,",obj.ben,"ben, og er",obj.alder(),"år gammel")
