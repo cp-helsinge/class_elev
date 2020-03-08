@@ -32,7 +32,7 @@ class Menneske:
 class Elev(Menneske):
     ''' Dette er vores Elev klasse som nedarver fra Menneske klassen '''
     def __init__ (self):
-        uartig="Nej"
+        self.uartig="Nej"
 
     def erUartig(self):
         return self.uartig
@@ -40,14 +40,13 @@ class Elev(Menneske):
 
 class Underviser(Menneske):
     ''' Dette er vores Underviser klasse som nedarver fra Menneske klassen '''
-
     def __init__ (self):
-        streng="Ja"
+        self.streng="Ja"
 
     def erStreng(self):
         return self.streng
 
 
 jesper=Underviser()
-jesper.arme
+print(jesper.arme)
 
