@@ -10,10 +10,12 @@ class Menneske:
         ben=2
 
     def antalArme(self):
+        print("Jeg har ";arme;" arme")
         return self.arme
 
     def antalBen(self):
         return self.ben
+
 
 class DerivedClass(Menneske): Elev
     ''' Dette er vores Elev klasse som nedarver fra Menneske klassen '''
