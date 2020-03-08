@@ -5,17 +5,16 @@ import datetime
 
 class Menneske:
     ''' Dette er vores Menneske klasse '''
-    def __init__ (self, fn, en):
-        self.fornavn=fn
-        self.efternavn=en
+    def __init__ (self):
+        self.fornavn=None
+        self.efternavn=None
         self.arme=2
         self.ben=2
-        self.fødtDato=0
+        self.fødtDag=0
         self.fødtMåned=0
         self.fødtÅr=0
-        self.alder=None
 
-    def printname(self):
+    def fuldeNavn(self):
         print(self.fornavn, self.efternavn)
 
     def antalArme(self):
@@ -29,6 +28,11 @@ class Menneske:
     def hvorGammel(self):
         print("Jeg er",alder,"år gammel")
         return self.alder
+
+    def alder(self):
+    nu = date.today()
+    fdag = date(self.fødtÅr, self.fødtMåned, self.fødtDag)
+    return nu.year - fdag.year - ((nu.month, day) < (fdag.month, fDag.day))
 
 
 class Elev(Menneske):
@@ -50,7 +54,10 @@ class Underviser(Menneske):
     def erStreng(self):
         return self.streng
 
-
-jesper=Underviser()
-print(jesper.arme)
-
+obj=Underviser()
+obj.fornavn="Jesper"
+obj.efternavn="Sommer"
+obj.fødtDato=27
+obj.fødtMåned=3
+obj.fødtÅr=1973
+print(fuldeNavn,"har",jesper.arme,"arme,",jesper.ben,"ben, og er",jesper.alder,"år gammel")
