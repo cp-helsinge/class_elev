@@ -10,10 +10,11 @@ class Menneske:
         ben=2
 
     def antalArme(self):
-        print("Jeg har ",arme," arme")
+        print("Jeg har",arme,"arme")
         return self.arme
 
     def antalBen(self):
+        print("Jeg har",ben,"ben")
         return self.ben
 
 
@@ -23,7 +24,7 @@ class DerivedClass(Menneske): Elev
         uartig="Nej"
 
     def erUartig(self):
-        return self.arme
+        return self.uartig
 
 
 class DerivedClass(Menneske): Underviser
@@ -33,7 +34,7 @@ class DerivedClass(Menneske): Underviser
         streng="Ja"
 
     def erStreng(self):
-        return self.uartig
+        return self.streng
 
 
 
