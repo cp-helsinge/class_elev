@@ -30,9 +30,9 @@ class Menneske:
         return self.alder
 
     def alder(self):
-    nu = date.today()
-    fdag = date(self.fødtÅr, self.fødtMåned, self.fødtDag)
-    return nu.year - fdag.year - ((nu.month, day) < (fdag.month, fDag.day))
+        nu = date.today()
+        fdag = date(self.fødtÅr, self.fødtMåned, self.fødtDag)
+        return nu.year - fdag.year - ((nu.month, day) < (fdag.month, fDag.day))
 
 
 class Elev(Menneske):
